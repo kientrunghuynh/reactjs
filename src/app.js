@@ -1,15 +1,19 @@
-import React, { Component } from 'react'
-import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
-class App extends Component {
+import React from 'react'
+import { Link } from 'react-router'
+
+import List from './Task/List'
+
+export default React.createClass({
   render() {
     return (
-      <Router history={hashHistory}>
-        <Route path='/' component={Home} />
-        <Route path='/address' component={Address} />
-      </Router>
+      <div>
+        <h1>Tasks Management</h1>
+        <ul role="nav">
+          <li><Link to="/">Home</Link></li>
+          <li><Link activeStyle={{ color: 'red' }} to="/create">Create task</Link></li>
+        </ul>
+        {this.props.children || <List/>}
+      </div>
     )
   }
-}
-const Home = () => <h1>Hello from Home!</h1>
-const Address = () => <h1>We are located at 555 Jackson St.</h1>
-export default App
+})

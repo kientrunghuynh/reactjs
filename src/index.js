@@ -1,8 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
+import { Router, Route, hashHistory } from 'react-router'
+
+import app from './app'
+import TaskList from './Task/List'
+import Create from './Task/Create'
+import Detail from './Task/Detail'
+import TopMenu from './partials/Menu'
 
 ReactDOM.render(
-    <App />, 
+    <Router history={hashHistory}>
+        <Route path="/" component={app} >
+            <Route path="/create" component={Create} />
+        </Route>    
+    </Router>,
     document.getElementById('root')
 )
