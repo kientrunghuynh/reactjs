@@ -1,16 +1,15 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 
-class TopMenu extends Component {
+class Navgation extends Component {
   render() {
     return (
-      <ul class='role-nav'>
-        <li>Home</li>
-        <li>Task List</li>
-        <li>Create Task</li>
+      <ul role="nav">
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/create">Create task</Link></li>
       </ul>
     )
   }
 }
 
-export default TopMenu
+export default Navgation
