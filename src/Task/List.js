@@ -7,10 +7,10 @@ class TaskList extends Component {
       <div class='list-tasks'>
         <p>This is list tasks</p>
         <ul>
-          <li>Taks 1 </li>
-          <li>Taks 2 </li>
-          <li>Taks 3 </li>
-          <li>Taks 4 </li>
+          <li><Link to="/detail">Taks 1 </Link></li>
+          <li><Link to="/detail">Taks 2 </Link></li>
+          <li><Link to="/detail">Taks 3 </Link></li>
+          <li><Link to="/detail">Taks 4 </Link></li>
         </ul>
       </div>
     )

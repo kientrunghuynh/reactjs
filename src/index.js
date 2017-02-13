@@ -12,6 +12,7 @@ ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={app} >
             <Route path="/create" component={Create} />
+            <Route path="/detail" component={Detail} />
         </Route>    
     </Router>,
     document.getElementById('root')

@@ -25,7 +25,7 @@ var config = {
     }]
   },
 	devServer: {
-		port: 8080,
+		port: 8181,
     contentBase: "./public",
     colors: true,
     historyApiFallback: true,
